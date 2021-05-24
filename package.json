@@ -1,0 +1,33 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "connection.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "n/a",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnnyMatharu/Tech-Blog.git"
+  },
+  "keywords": [
+    "n/a"
+  ],
+  "author": "Johnny Matharu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnnyMatharu/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/JohnnyMatharu/Tech-Blog#readme"
+}
