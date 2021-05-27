@@ -8,7 +8,50 @@
 //express-session
 //connect-session-sequelize
 
-//current at user-routes
+//current
+const router = require('express').Router();
+
+const userRoutes = require('./user-routes.js');
+const postRoutes = require('./post-routes');
+const commentRoutes = require('./comment-routes');
+
+router.use('/users', userRoutes);
+router.use('/posts', postRoutes);
+router.use('/comments', commentRoutes);
+
+module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Erik
+//Session is only for login and log out authentication, controlled through server.js, 
+//has nothing to do with username, that is through post route including user model to get user name. 
+//Bcrypt will save the data in the seeds folder database under user, it will be hashed form, bycrypt is 
+//used in user.js model used to help logging in and using user route its passed in the database. 
+//Hooks are being used for Bcrypt run before creating a model and once before starting. 
+//Firebase is better than bcrypt.   
+
+
+
 
 
 //check lesson code chapter by chapter next step (previous if needed), current 14.1 
