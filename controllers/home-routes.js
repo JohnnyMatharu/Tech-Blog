@@ -1,3 +1,6 @@
+//home page res render is being passed here, explanation is needed for all pages need to be covered and 
+//the if..each etc. string literals used in handlebars need explanation, where are they getting divided?
+
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment} = require('../models');

@@ -39,7 +39,10 @@ module.exports = router;
 
 
 
-
+//tutor: github readme for session
+//https://github.com/expressjs/session
+//session add time and use console.log for data output instead of
+//insomnia
 
 
 //Erik
