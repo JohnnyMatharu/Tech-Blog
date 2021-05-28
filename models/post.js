@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../connection');
 // create our Post model
 
+class Post extends Model {}
 // create fields/columns for Post model
 Post.init(
   {
@@ -18,7 +19,6 @@ Post.init(
     post_text: {
       type: DataTypes.STRING,
       allowNull: false
-    }
     },
     //make sure this part and errors
     user_id: {
@@ -28,6 +28,7 @@ Post.init(
         key: 'id'
       }
     }
+  },
   {
     sequelize,
     freezeTableName: true,

@@ -2,7 +2,7 @@
 //the if..each etc. string literals used in handlebars need explanation, where are they getting divided?
 
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+const sequelize = require('../connection');
 const { Post, User, Comment} = require('../models');
 
 // get all posts for homepage

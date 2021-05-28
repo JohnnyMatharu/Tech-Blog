@@ -1,13 +1,5 @@
-//Al the following requires are meant to go to appropriate files including connection and server.js etc.
-//require handlebars
-//require mysql (2)
-//require sequelize
-//require express
-//require .env package 
-//require bcrpyt
-//express-session
-//connect-session-sequelize
-
+//Also installed express.js, MySQL is sourced and database is accessible, server is listening at http://localhost:3001
+//db files have been seeded, next check routes
 //current
 const router = require('express').Router();
 
