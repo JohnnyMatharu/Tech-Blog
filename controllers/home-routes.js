@@ -34,6 +34,7 @@ router.get('/', (req, res) => {
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
 //the following is link to handlebar for homepage
+console.log(posts);
       res.render('homepage', { posts });
     })
     .catch(err => {
