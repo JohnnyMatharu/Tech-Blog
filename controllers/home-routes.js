@@ -1,5 +1,6 @@
 //home page res render is being passed here, explanation is needed for all pages need to be covered and 
 //the if..each etc. string literals used in handlebars need explanation, where are they getting divided?
+//this route has not been checked and connected to login and sequelize, can only be checked through front end
 
 const router = require('express').Router();
 const sequelize = require('../connection');

@@ -1,5 +1,7 @@
 //this page will work with authorizaton through sessions for logged in 
 //edit-post and dashboard data is passed here to re render
+//this route is to be checked through front end 
+//this route has not been checked, and connected to login and sequelize 
 
 
 const router = require('express').Router();
