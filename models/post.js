@@ -1,3 +1,7 @@
+//missing created (or updated) at for post
+//you may need 'created at' for comments for home page, find out from handlebar display (may use just comment route)
+
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../connection');
 // create our Post model

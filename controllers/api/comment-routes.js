@@ -1,6 +1,7 @@
 //comment has only post and get (get used for homepage)
 //post has get, post, update, delete (get used for homepage)
 //user has login and logout (check)
+//this comment route has been checked fully functional and able to display the date by itself
 
 const router = require('express').Router();
 const { Comment } = require('../../models');

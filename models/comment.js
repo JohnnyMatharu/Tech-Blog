@@ -1,6 +1,7 @@
 //comment has only id/comment_id and comment_text (large characters) 
 //post has id/post_id, title, blog_text (large characters) 
-//user 
+//You may have to add the user name info here too depending on final display from handlebars, for comments
+//only thing needed is 'created at' 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../connection');
 
