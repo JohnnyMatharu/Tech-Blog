@@ -73,6 +73,7 @@ router.post('/', (req, res) => {
 //this route is to login, post info and then match
 router.post('/login', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  console.log("Hello");
   User.findOne({
     where: {
      username: req.body.username

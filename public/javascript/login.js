@@ -1,14 +1,15 @@
 async function loginFormHandler(event) {
     event.preventDefault();
   
-    const email = document.querySelector('#email-login').value.trim();
+    const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
-  
-    if (email && password) {
+  console.log(username)
+  console.log(password)
+
       const response = await fetch('/api/users/login', {
         method: 'post',
         body: JSON.stringify({
-          email,
+          username,
           password
         }),
         headers: { 'Content-Type': 'application/json' }
@@ -20,9 +21,8 @@ async function loginFormHandler(event) {
         alert(response.statusText);
       }
     }
-  }
   
-  async function signupFormHandler(event) {
+    async function signupFormHandler(event) {
     event.preventDefault();
   
     const username = document.querySelector('#username-signup').value.trim();
