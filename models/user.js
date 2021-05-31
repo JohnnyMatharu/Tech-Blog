@@ -46,6 +46,7 @@ User.init(
       }
     },
     sequelize,
+    // timestamp is default here
     timestamps: false,
     freezeTableName: true,
     underscored: true,

@@ -4,7 +4,14 @@
   <li>
     {{> post-info post }}
   </li>
+  {{!-- added --}}
   <div>{{post.post_text}}</div>
-
+  <br>
+  <p>Comments</p>
+  {{!-- added --}}
+  {{#each post.comments as |comment|}}
+{{> comments comment}}
+<br>
+{{/each}}
   {{/each}}
 </ol>

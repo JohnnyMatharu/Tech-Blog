@@ -3,8 +3,9 @@
     <a target="_blank">{{title}}</a>
   </div>
   <div class="meta">
-  by {{user.username}} on {{format_date}}
+  by {{user.username}} on {{format_date createdAt}}
     |
     <a href="/post/{{id}}">{{comments.length}}</a>
   </div>
 </article>
+{{!-- createsdAt was included here and in the model --}}

@@ -13,13 +13,15 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'title',
-      'post_text'
+      'post_text',
+      'createdAt'
     ],
     //check if we need user name or user ID, or user name
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'user_id'],
+        // createdAt was added here
+        attributes: ['id', 'comment_text', 'user_id', 'createdAt'],
         include: {
           model: User,
           attributes: ['username']
