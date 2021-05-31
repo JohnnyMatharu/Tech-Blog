@@ -92,10 +92,16 @@ router.post('/login', (req, res) => {
       return;
     }
 
+    req.session.save(() => {
+      //save custom fields before res.json
+      req.session.user_id = dbUserData.id 
+
+
+
     res.json({ user: dbUserData, message: 'You are now logged in!' });
   });
 });
-
+});
 
 router.put('/:id', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
