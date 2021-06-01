@@ -1,0 +1,52 @@
+{{!-- this will create comment, use comment.js to post once button is clicked --}}
+{{!-- this is just a test --}}
+{{!-- classes need to be checked --}}
+{{!-- make sure we have enough css to back this as this is brand new page --}}
+{{> post-info post}}
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+    <button type="button" class="comment-form">Comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/add-comment.js"></script>
+{{/if}}
+
+{{!-- following is code given by James, is not commented --}}
+
+<div class="post">
+    <article class="card">
+        <!-- Show our post details to the user -->
+    </article>
+
+    {{#if post.comments}}
+        <section class="card">
+            <!-- Show a list of comments for this post to the user -->
+        </section>
+    {{/if}}
+
+    <form class="card comment-form">
+        <div class="card-header">
+            <h3>Add New Comment</h3>
+        </div>
+
+        <div class="card-body">
+            <label class="form-label" for="comment-body">Comment</label>
+            <textarea name="comment-body" class="form-input"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
+</div>
+<script src="/javascript/comment.js"></script>
