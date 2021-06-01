@@ -145,4 +145,12 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.post("/logout", (req, res) => {
+  req.session.destroy(() => {
+      res.sendStatus(204);
+  });
+});
+
+
+
 module.exports = router;
