@@ -20,12 +20,13 @@ router.get('/', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
+      'createdAt'
     ],
     include: [
       {
           //check the need of user_id
         model: Comment,
-        attributes: ['id', 'comment_text', 'user_id'],
+        attributes: ['id', 'comment_text', 'user_id', 'createdAt'],
         include: {
           model: User,
           attributes: ['username']
