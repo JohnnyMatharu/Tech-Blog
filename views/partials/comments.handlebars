@@ -7,7 +7,9 @@
       {{user.username}} on {{format_date createdAt}}
     </div>
     <div class="text">
-   <a href="/create-comment">{{comment_text}}></a>
+      {{!-- this will chage to path you are rendering, then link this to single-post, then that handlebar--}}
+      {{!-- will be connected connected to comment.js to post using comment-route --}}
+   <a href="/single-post/post/{{id}}">{{comment_text}}></a>
     </div>
   </section>
   {{!-- check what is this --}}
