@@ -2,7 +2,7 @@
 //user needs to be logged in to access this, reminder
 const router = require('express').Router();
 const sequelize = require('../connection');
-const {Comment } = require('../models');
+const {Comment,Post} = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
