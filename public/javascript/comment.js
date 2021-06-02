@@ -4,6 +4,7 @@ async function commentFormHandler(event) {
     event.preventDefault();
   
     const comment_text = document.querySelector('input[name="comment-text"]').value.trim();
+    console.log(comment_text, "I am cheking this************")
     const post_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -12,6 +13,7 @@ async function commentFormHandler(event) {
       const response = await fetch('/api/comments', {
         method: 'POST',
         body: JSON.stringify({
+          //this ahd been changed from post id to user
           post_id,
           comment_text
         }),
