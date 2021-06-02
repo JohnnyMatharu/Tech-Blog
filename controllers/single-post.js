@@ -11,7 +11,8 @@ router.get("/post/:id", withAuth, (req, res) => {
     // the post, as well as the comment(s) that are attached to the post.
   console.log(req.session, "session is now on, you are logged in");
   console.log('======================');
-  
+  console.log(req.params)
+  console.log(req.params.id)
   Post.findByPk(req.params.id, {
     attributes: [
       'id',
@@ -25,8 +26,6 @@ router.get("/post/:id", withAuth, (req, res) => {
           //check the need of user_id
         model: Comment,
         attributes: ['id', 'comment_text', 'user_id', 'createdAt'],
-        model: Post,
-        attributes: ['id', 'post_text', 'user_id', 'createdAt'],
         include: {
           model: User,
           attributes: ['username']
@@ -39,6 +38,7 @@ router.get("/post/:id", withAuth, (req, res) => {
     ]
   })
     .then(dbPostData => {
+    console.log(dbPostData)
 // If postData exists...
         //   (1) Grab the post via `postData.get({ plain: true })`
         //   (2) Render the single post via Handlebars
@@ -49,6 +49,7 @@ router.get("/post/:id", withAuth, (req, res) => {
         //following to be checked for postData or just post as said by James
       const posts = dbPostData.map(post => post.get({ plain: true }));
       res.render('create-comment', { posts, loggedIn: true });
+      console.log(posts);
     })
     .catch(err => {
       console.log(err);
