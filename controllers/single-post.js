@@ -47,8 +47,8 @@ router.get("/post/:id", withAuth, (req, res) => {
         //   (1) Send a 500 Internal Server Error to the client
 
         //following to be checked for postData or just post as said by James
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('create-comment', { posts, loggedIn: true });
+     
+      res.render('create-comment', { post: dbPostData, loggedIn: true });
       console.log(posts);
     })
     .catch(err => {
