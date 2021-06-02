@@ -2,7 +2,7 @@
 //user needs to be logged in to access this, reminder
 const router = require('express').Router();
 const sequelize = require('../connection');
-const {Comment,Post} = require('../models');
+const {Comment,Post,User} = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
@@ -25,7 +25,7 @@ router.get("/post/:id", withAuth, (req, res) => {
           //check the need of user_id
         model: Comment,
         attributes: ['id', 'comment_text', 'user_id', 'createdAt'],
-        model: post,
+        model: Post,
         attributes: ['id', 'post_text', 'user_id', 'createdAt'],
         include: {
           model: User,
