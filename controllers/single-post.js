@@ -48,8 +48,7 @@ router.get("/post/:id", withAuth, (req, res) => {
 
         //following to be checked for postData or just post as said by James
      
-      res.render('create-comment', { post: dbPostData, loggedIn: true });
-      console.log(posts);
+      res.render('create-comment', { posts: dbPostData, loggedIn: true });
     })
     .catch(err => {
       console.log(err);
