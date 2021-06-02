@@ -9,6 +9,7 @@ async function commentFormHandler(event) {
 // It is confirmed that data is reaching here, single-post route is working, create-comment.handlebars is working, now worry
 //is data loading on database through insomnia, now worry about anything beyond this point, comment route, homepage route and
 //homepage handlebar 
+//insomnia has been checked and data is getting posted, has been checked, there seems issue with displaying the data back
 
     
     const post_id = window.location.toString().split('/')[
