@@ -5,6 +5,12 @@ async function commentFormHandler(event) {
   
     const comment_text = document.querySelector('input[name="comment-text"]').value.trim();
     console.log(comment_text, "I am cheking this************")
+
+// It is confirmed that data is reaching here, single-post route is working, create-comment.handlebars is working, now worry
+//is data loading on database through insomnia, now worry about anything beyond this point, comment route, homepage route and
+//homepage handlebar 
+
+    
     const post_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -29,8 +35,7 @@ async function commentFormHandler(event) {
       }
     }
   }
-  
-  document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+  document.querySelector('.comment-form').addEventListener('click', commentFormHandler);
 
   /*
 async function commentClickHandler(event) {
