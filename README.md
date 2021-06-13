@@ -2,7 +2,7 @@
 Tech-Blog
 
 # Description
-This is a blog post site where people can chat or talk about common topics, it could be any topic or a common problem, or even a global issue. People can find common solutions by connecting, or atleast to gain knowlwdge for them to do it themselves 
+An app for users to post ways in which they'd like to offer help or post volunteer opportunities. The main problems of people are being solved here, people can post what type of help they are looking for and people will leave their posts who wish to help or volunteer. Chances are that the person requesting is able to offer a reward to helper, but helper will firsthand ask for no money. Such a relationship may lead to permanent long term career bonds between people financially or non-financially.
 
 This application uses MVC paradigm and Sequelize to create models. These models are used to create data groups to use handlebars to display final output to the user. User will see the blog posts with the comments on the homepage screen where user has to log in or sign up to add comment or edit the existing post
 
