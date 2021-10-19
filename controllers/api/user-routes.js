@@ -14,6 +14,9 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+ 
+//HERE add router.get
+
 
 router.get('/:id', (req, res) => {
   User.findOne({
