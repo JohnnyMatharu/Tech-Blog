@@ -1,5 +1,5 @@
 <section>
-  <h2>Create New Post</h2>
+  <h2 id = "headings">Create New Post</h2>
 
   <form class="new-post-form">
     <div>
@@ -10,13 +10,15 @@
       <label for="post-text">Post</label>
       <input id="post-text" name="post-text" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn btn-warning">Create</button>
   </form>
+  <br>
+  
 </section>
 {{!-- check what is this --}}
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 id = "headings">Your Posts</h2>
   <ol>
       {{!-- check what is this --}}
     {{#each posts as |post|}}
